@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html, body {
+    @apply bg-black overflow-hidden m-0 p-0 w-full h-full text-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans);
+    cursor: none !important;
+  }
+
+  /* Hide scrollbars for TV */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Prevent text selection on TV */
+  * {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
